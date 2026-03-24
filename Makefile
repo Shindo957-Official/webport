@@ -23,7 +23,7 @@ DEBUG ?= 0
 DEVELOPMENT ?= 0
 
 # Build for the N64 (turn this off for ports)
-TARGET_N64 = 0
+TARGET_N64 ?= 0
 
 # Build and optimize for Raspberry Pi(s)
 TARGET_RPI ?= 0
@@ -46,6 +46,12 @@ ENHANCE_LEVEL_TEXTURES ?= 1
 DISCORD_SDK ?= 1
 # Enable CoopNet SDK (used for CoopNet server hosting)
 COOPNET ?= 1
+
+# N64 target does not support PC-only SDKs
+ifeq ($(TARGET_N64),1)
+  DISCORD_SDK := 0
+  COOPNET := 0
+endif
 # Enable docker build workarounds
 DOCKERBUILD ?= 0
 # Sets your optimization level for building.
@@ -486,7 +492,11 @@ _ := $(shell $(PYTHON) $(TOOLS_DIR)/copy_extended_sounds.py)
 
 BUILD_DIR_BASE := build
 # BUILD_DIR is the location where all build artifacts are placed
-BUILD_DIR := $(BUILD_DIR_BASE)/$(VERSION)_pc
+ifeq ($(TARGET_N64),1)
+  BUILD_DIR := $(BUILD_DIR_BASE)/$(VERSION)_n64
+else
+  BUILD_DIR := $(BUILD_DIR_BASE)/$(VERSION)_pc
+endif
 
 ifeq ($(WINDOWS_BUILD),1)
 	EXE := $(BUILD_DIR)/sm64coopdx.exe
@@ -503,6 +513,7 @@ ifeq ($(TARGET_RK3588),1)
 endif
 
 ELF            := $(BUILD_DIR)/$(TARGET).elf
+ROM            := $(BUILD_DIR)/$(TARGET).z64
 LIBULTRA       := $(BUILD_DIR)/libultra.a
 LD_SCRIPT      := sm64.ld
 MIO0_DIR       := $(BUILD_DIR)/bin
@@ -515,6 +526,7 @@ LEVEL_DIRS     := $(patsubst levels/%,%,$(dir $(wildcard levels/*/header.h)))
 SRC_DIRS := src src/engine src/game src/audio src/menu src/buffers actors levels bin data assets asm lib sound
 BIN_DIRS := bin bin/$(VERSION)
 
+ifeq ($(TARGET_N64),0)
 # PC files
 SRC_DIRS += src/pc src/pc/gfx src/pc/audio src/pc/controller src/pc/fs src/pc/fs/packtypes src/pc/mods src/pc/dev src/pc/network src/pc/network/packets src/pc/network/socket src/pc/network/coopnet src/pc/utils src/pc/utils/miniz src/pc/djui src/pc/lua src/pc/lua/utils src/pc/os
 
@@ -523,6 +535,7 @@ ifeq ($(DISCORD_SDK),1)
 endif
 
 SRC_DIRS += src/pc/mumble
+endif
 
 ULTRA_SRC_DIRS := lib/src lib/src/math lib/asm lib/data
 ULTRA_BIN_DIRS := lib/bin
@@ -1175,8 +1188,11 @@ endef
 # Main Targets                                                                 #
 #==============================================================================#
 
-#all: $(ROM)
+ifeq ($(TARGET_N64),1)
+all: $(ROM)
+else
 all: $(EXE)
+endif
 
 ifeq ($(WINDOWS_BUILD),1)
 MAPFILE = $(BUILD_DIR)/coop.map
