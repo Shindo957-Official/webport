@@ -6,8 +6,20 @@
 
 #include <ultra64.h>
 #include "macros.h"
+#include <stdbool.h>
+#ifndef TARGET_N64
 #include "pc/network/version.h"
 #include "pc/platform.h"
+#endif
+
+#ifdef TARGET_N64
+// Lua autogen annotation macros — defined in smlua_autogen.h for PC builds,
+// but that header is PC-only. Define them as empty for N64.
+#define VEC_OUT
+#define RET
+#define INOUT
+#define OPTIONAL
+#endif
 
 // Certain functions are marked as having return values, but do not
 // actually return a value. This causes undefined behavior, which we'd rather
@@ -600,7 +612,9 @@ struct TextureInfo
 #define COOP_OBJ_FLAG_INITIALIZED (1 << 3)
 
 #include "game/characters.h"
+#ifndef TARGET_N64
 #include "data/dynos.c.h"
 #include "src/pc/lua/smlua_autogen.h"
+#endif
 
 #endif // _SM64_TYPES_H_

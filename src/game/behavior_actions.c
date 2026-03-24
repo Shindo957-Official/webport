@@ -1,6 +1,8 @@
 #include <PR/ultratypes.h>
 
+#ifndef TARGET_N64
 #include "pc/network/network.h"
+#endif
 #include "types.h"
 #include "actors/common1.h"
 #include "actors/group12.h"
