@@ -13,10 +13,12 @@
 #include "behavior_data.h"
 #include "rumble_init.h"
 #include "hardcoded.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
+#endif
 
 struct LandingAction {
     s16 numFrames;

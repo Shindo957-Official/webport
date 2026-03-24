@@ -27,10 +27,12 @@
 #include "rendering_graph_node.h"
 #include "spawn_object.h"
 #include "spawn_sound.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/lua/utils/smlua_camera_utils.h"
 #include "pc/lua/utils/smlua_model_utils.h"
+#endif
 #include "first_person_cam.h"
 
 u8 (*gContinueDialogFunction)(void) = NULL;

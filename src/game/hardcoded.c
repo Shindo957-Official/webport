@@ -34,7 +34,9 @@
 #include "levels/wf/header.h"
 #include "levels/wmotr/header.h"
 
+#ifndef TARGET_N64
 #include "pc/pc_main.h"
+#endif
 
 extern Trajectory sThiHugeMetalBallTraj[];
 extern Trajectory sThiTinyMetalBallTraj[];

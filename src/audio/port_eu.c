@@ -4,7 +4,9 @@
 #include "data.h"
 #include "seqplayer.h"
 #include "synthesis.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
+#endif
 
 #ifdef VERSION_EU
 

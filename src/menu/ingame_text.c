@@ -1,6 +1,8 @@
 #include <PR/ultratypes.h>
 #include "ingame_text.h"
+#ifndef TARGET_N64
 #include "pc/rom_assets.h"
+#endif
 
 u8 gTEXT_ZERO[TEXT_ZERO_LENGTH] = { 0xFF };
 u8 gTEXT_COIN[TEXT_COIN_LENGTH] = { 0xFF };

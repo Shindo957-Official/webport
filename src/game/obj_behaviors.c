@@ -33,11 +33,13 @@
 #include "spawn_sound.h"
 #include "hardcoded.h"
 #include "engine/surface_load.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/network/network_player.h"
 #include "pc/lua/smlua.h"
 #include "pc/lua/utils/smlua_model_utils.h"
 #include "pc/lua/utils/smlua_obj_utils.h"
+#endif
 #include "game/rng_position.h"
 #include "rumble_init.h"
 

@@ -10,7 +10,9 @@
 #include "macro_presets.h"
 
 #include "special_presets.h"
+#ifndef TARGET_N64
 #include "pc/network/sync_object.h"
+#endif
 /*
  * Converts the rotation value supplied by macro objects into one
  * that can be used by in-game objects.

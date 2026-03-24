@@ -20,10 +20,12 @@
 #include "obj_behaviors.h"
 #include "level_update.h"
 #include "mario_step.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
+#endif
 
 #define POLE_NONE          0
 #define POLE_TOUCHED_FLOOR 1

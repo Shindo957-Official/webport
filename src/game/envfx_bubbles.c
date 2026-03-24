@@ -1,4 +1,6 @@
+#ifndef TARGET_N64
 #include "pc/rom_assets.h"
+#endif
 #include <ultra64.h>
 
 #include "sm64.h"
@@ -12,7 +14,9 @@
 #include "audio/external.h"
 #include "textures.h"
 #include "game/rendering_graph_node.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
+#endif
 #include "game/hardcoded.h"
 
 /**

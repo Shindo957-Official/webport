@@ -16,11 +16,15 @@
 #include "paintings.h"
 #include "save_file.h"
 #include "segment2.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
+#endif
 #include "obj_behaviors.h"
 #include "level_update.h"
+#ifndef TARGET_N64
 #include "pc/network/network_player.h"
 #include "pc/lua/utils/smlua_gfx_utils.h"
+#endif
 #include "print.h"
 #include "hardcoded.h"
 

@@ -28,11 +28,13 @@
 #include "object_list_processor.h"
 #include "hardcoded.h"
 
+#ifndef TARGET_N64
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/network/lag_compensation.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/lua/utils/smlua_obj_utils.h"
+#endif
 
 u8 sDelayInvincTimer;
 s16 gInteractionInvulnerable;

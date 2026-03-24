@@ -14,7 +14,9 @@
 #include "level_table.h"
 #include "seq_ids.h"
 #include "sm64.h"
+#ifndef TARGET_N64
 #include "pc/lua/utils/smlua_level_utils.h"
+#endif
 #include "menu/intro_geo.h"
 
 #define STUB_LEVEL(textname, _1, _2, _3, _4, _5, _6, _7, _8) textname,

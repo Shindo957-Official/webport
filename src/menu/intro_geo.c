@@ -15,7 +15,9 @@
 
 #include "gfx_dimensions.h"
 #include "game/rendering_graph_node.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
+#endif
 
 // frame counts for the zoom in, hold, and zoom out of title model
 #define INTRO_STEPS_ZOOM_IN 20

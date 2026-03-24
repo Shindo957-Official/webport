@@ -37,16 +37,20 @@
 #include "game/interaction.h"
 #include "menu/intro_geo.h"
 
+#ifndef TARGET_N64
 #include "pc/pc_main.h"
 #include "pc/cliopts.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/djui/djui.h"
+#endif
 // used for getting gMainMenuSounds
+#ifndef TARGET_N64
 #include "pc/djui/djui_panel_menu_options.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/mods/mods.h"
 #include "pc/nametags.h"
+#endif
 
 #include "game/screen_transition.h"
 

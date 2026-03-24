@@ -20,13 +20,17 @@
 #include "segment2.h"
 #include "segment_symbols.h"
 #include "rng_position.h"
+#ifndef TARGET_N64
 #include "pc/djui/djui.h"
 #include "pc/djui/djui_panel_pause.h"
+#endif
 #include "rumble_init.h"
 #include <prevent_bss_reordering.h>
 #include "bettercamera.h"
 #include "hud.h"
+#ifndef TARGET_N64
 #include "pc/controller/controller_mouse.h"
+#endif
 
 // FIXME: I'm not sure all of these variables belong in this file, but I don't
 // know of a good way to split them

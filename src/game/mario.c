@@ -38,10 +38,12 @@
 #include "rumble_init.h"
 #include "obj_behaviors.h"
 #include "hardcoded.h"
+#ifndef TARGET_N64
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
 #include "pc/network/socket/socket.h"
+#endif
 #include "bettercamera.h"
 #include "first_person_cam.h"
 

@@ -12,7 +12,9 @@
 #include "screen_transition.h"
 #include "segment2.h"
 #include "sm64.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
+#endif
 #include "hud.h"
 
 u8 sTransitionColorFadeCount[4] = { 0 };

@@ -12,9 +12,11 @@
 #include "rumble_init.h"
 #include "hardcoded.h"
 #include "macros.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/utils/smlua_level_utils.h"
 #include "pc/utils/misc.h"
+#endif
 
 #ifndef bcopy
 #define bcopy(b1,b2,len) (memmove((b2), (b1), (len)), (void) 0)

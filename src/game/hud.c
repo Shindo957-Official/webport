@@ -18,11 +18,13 @@
 #include "print.h"
 #include "hardcoded.h"
 #include "bettercamera.h"
+#ifndef TARGET_N64
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/utils/misc.h"
 #include "pc/lua/smlua.h"
 #include "pc/lua/utils/smlua_obj_utils.h"
+#endif
 #include "data/dynos_mgr_builtin_externs.h"
 
 extern bool gDjuiInMainMenu;

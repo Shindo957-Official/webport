@@ -21,8 +21,10 @@
 #include "sm64.h"
 #include "star_select.h"
 #include "prevent_bss_reordering.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/utils/smlua_misc_utils.h"
+#endif
 #include "engine/math_util.h"
 #include "game/print.h"
 #include "game/level_info.h"

@@ -1,8 +1,10 @@
 #include <stdlib.h>
 #include <ctype.h>
+#ifndef TARGET_N64
 #include "pc/ini.h"
 #include "pc/mods/mods.h"
 #include "pc/mods/mods_utils.h"
+#endif
 #include "player_palette.h"
 
 const struct PlayerPalette DEFAULT_MARIO_PALETTE =

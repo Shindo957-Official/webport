@@ -8,10 +8,14 @@
 #include "luigi_sounds.h"
 #include "wario_sounds.h"
 #include "toad_sounds.h"
+#ifndef TARGET_N64
 #include "pc/configfile.h"
+#endif
 #include "audio/external.h"
 #include "engine/graph_node.h"
+#ifndef TARGET_N64
 #include "pc/lua/smlua.h"
+#endif
 
 extern Gfx mario_cap_seg3_dl_03022F48[];
 extern Gfx mario_cap_m_logo_decal[];

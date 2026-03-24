@@ -6,7 +6,9 @@
 #include "mario.h"
 #include "object_list_processor.h"
 #include "spawn_object.h"
+#ifndef TARGET_N64
 #include "pc/network/network_player.h"
+#endif
 
 struct Object *debug_print_obj_collision(struct Object *a) {
     if (!a) { return NULL; }

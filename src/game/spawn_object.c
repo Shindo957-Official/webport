@@ -13,9 +13,11 @@
 #include "object_list_processor.h"
 #include "spawn_object.h"
 #include "types.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/debug_context.h"
+#endif
 
 /**
  * An unused linked list struct that seems to have been replaced by ObjectNode.

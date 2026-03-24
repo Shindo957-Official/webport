@@ -23,8 +23,10 @@
 #include "spawn_object.h"
 #include "first_person_cam.h"
 #include "engine/math_util.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
+#endif
 
 /**
  * Flags controlling what debug info is displayed.

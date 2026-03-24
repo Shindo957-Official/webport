@@ -9,10 +9,12 @@
 
 #include "sound_data.h"
 
+#ifndef TARGET_N64
 #include "pc/platform.h"
 #include "pc/fs/fs.h"
 #include "pc/lua/utils/smlua_audio_utils.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 #define ALIGN16(val) (((val) + 0xF) & ~0xF)
 

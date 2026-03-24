@@ -17,7 +17,9 @@
 #include "sm64.h"
 #include "sound_init.h"
 #include "rumble_init.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
+#endif
 
 #define MUSIC_NONE 0xFFFF
 

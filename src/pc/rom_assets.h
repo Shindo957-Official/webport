@@ -1,6 +1,27 @@
 #pragma once
 #include <PR/ultratypes.h>
 
+#ifdef TARGET_N64
+/* For N64 ROM builds: declare the arrays without the PC runtime loader.
+   The data is baked into the ROM by the build system. */
+#define ROM_ASSET_LOAD_VTX(_name, _pa, _ps, _sa, _ss) \
+    Vtx _name[(_ss) / 16];
+#define ROM_ASSET_LOAD_TEXTURE(_name, _fn, _pa, _ps, _sa, _ss) \
+    ALIGNED8 Texture _name[_ss];
+#define ROM_ASSET_LOAD_SAMPLE(_name, _ptr, _pa, _ps, _sa, _ss)
+#define ROM_ASSET_LOAD_SEQUENCE(_name, _ptr, _pa, _ps, _sa, _ss)
+#define ROM_ASSET_LOAD_COLLISION(_name, _pa, _ps, _sa, _ss) \
+    Collision _name[(_ss) / 2];
+#define ROM_ASSET_LOAD_ANIM(_name, _pa, _ps, _sa, _ss) \
+    static u16 _name[(_ss) / 2];
+#define ROM_ASSET_LOAD_ANIM_2D(_name, _pa, _ps, _sa, _ss, _d2) \
+    static u16 _name[(_ss) / (2 * _d2)][_d2];
+#define ROM_ASSET_LOAD_MARIO_ANIM(_name, _ptr, _pa, _ps, _sa, _ss) \
+    static u16 _name[(_ss) / 2];
+#define ROM_ASSET_LOAD_DIALOG(_ptr, _pa, _ps, _sa, _ss)
+#define ROM_ASSET_LOAD_DEMO(_name, _ptr, _pa, _ps, _sa, _ss)
+#else
+
 enum RomAssetType {
     ROM_ASSET_VTX,
     ROM_ASSET_TEXTURE,
@@ -70,3 +91,5 @@ __attribute__((constructor)) static void _name ## _rom_assets_queue () { \
 void rom_assets_load(void);
 void rom_assets_queue(void* ptr, enum RomAssetType assetType, u32 physicalAddress, u32 physicalSize, u32 segmentedAddress, u32 segmentedSize);
 u8* rom_assets_decompress(u32* data, u32* decompressedSize);
+
+#endif /* !TARGET_N64 */

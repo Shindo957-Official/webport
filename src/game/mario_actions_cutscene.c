@@ -30,12 +30,14 @@
 #include "obj_behaviors.h"
 #include "hardcoded.h"
 #include "libc/stdlib.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/pc_main.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 // TODO: put this elsewhere
 enum SaveOption { SAVE_OPT_SAVE_AND_CONTINUE = 1, /*SAVE_OPT_SAVE_AND_QUIT, SAVE_OPT_SAVE_EXIT_GAME,*/ SAVE_OPT_CONTINUE_DONT_SAVE };

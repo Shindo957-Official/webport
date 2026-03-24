@@ -8,7 +8,9 @@
 #include "seqplayer.h"
 #include "effects.h"
 
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
+#endif
 
 #define ALIGN16(val) (((val) + 0xF) & ~0xF)
 

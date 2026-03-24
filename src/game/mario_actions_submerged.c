@@ -16,11 +16,13 @@
 #include "behavior_data.h"
 #include "level_table.h"
 #include "rumble_init.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 #define MIN_SWIM_STRENGTH 160
 #define MIN_SWIM_SPEED 16.0f

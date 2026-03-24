@@ -12,11 +12,13 @@
 
 #include "engine/math_util.h"
 
+#ifndef TARGET_N64
 #include "pc/controller/controller_mouse.h"
 #include "pc/djui/djui.h"
 #include "pc/djui/djui_hud_utils.h"
 #include "pc/lua/utils/smlua_camera_utils.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 struct FirstPersonCamera gFirstPersonCamera = {
     .enabled = false,

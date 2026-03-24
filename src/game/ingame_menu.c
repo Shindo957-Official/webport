@@ -26,19 +26,27 @@
 #include "types.h"
 #include "macros.h"
 #include "hardcoded.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/djui/djui.h"
 #include "pc/djui/djui_panel.h"
 #include "pc/djui/djui_panel_pause.h"
 #include "pc/utils/misc.h"
+#endif
 #include "data/dynos_mgr_builtin_externs.h"
 #include "hud.h"
+#ifndef TARGET_N64
 #include "pc/lua/smlua_hooks.h"
+#endif
 #include "game/camera.h"
 #include "level_info.h"
+#ifndef TARGET_N64
 #include "pc/lua/utils/smlua_text_utils.h"
+#endif
 #include "menu/ingame_text.h"
+#ifndef TARGET_N64
 #include "pc/dialog_table.h"
+#endif
 
 u16 gDialogColorFadeTimer;
 s8 gLastDialogLineNum;

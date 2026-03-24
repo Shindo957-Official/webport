@@ -17,10 +17,12 @@
 #include "sound_init.h"
 #include "surface_terrains.h"
 #include "rumble_init.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua.h"
+#endif
 #include "hardcoded.h"
 
 /* |description|

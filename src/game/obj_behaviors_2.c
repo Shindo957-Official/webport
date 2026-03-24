@@ -46,9 +46,11 @@
 #include "spawn_sound.h"
 #include "hardcoded.h"
 #include "engine/surface_load.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/utils/smlua_model_utils.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 #define POS_OP_SAVE_POSITION 0
 #define POS_OP_COMPUTE_VELOCITY 1

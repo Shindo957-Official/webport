@@ -15,10 +15,12 @@
 #include "seq_ids.h"
 #include "dialog_ids.h"
 #include "level_table.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
 #include "pc/lua/utils/smlua_level_utils.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/dialog_table.h"
+#endif
 #include "dialog_ids.h"
 
 #if defined(VERSION_EU) || defined(VERSION_SH)

@@ -13,9 +13,11 @@
 #include "shadow.h"
 #include "sm64.h"
 #include "game/level_update.h"
+#ifndef TARGET_N64
 #include "pc/lua/smlua_hooks.h"
 #include "pc/utils/misc.h"
 #include "pc/debuglog.h"
+#endif
 #include "skybox.h"
 #include "first_person_cam.h"
 #include "course_table.h"

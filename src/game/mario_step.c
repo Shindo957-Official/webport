@@ -8,7 +8,9 @@
 #include "game_init.h"
 #include "interaction.h"
 #include "mario_step.h"
+#ifndef TARGET_N64
 #include "pc/lua/smlua.h"
+#endif
 #include "game/hardcoded.h"
 
 static s16 sMovingSandSpeeds[] = { 12, 8, 4, 0 };

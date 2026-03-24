@@ -11,7 +11,9 @@
 #include "engine/behavior_script.h"
 #include "audio/external.h"
 #include "obj_behaviors.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
+#endif
 
 /**
  * This file contains the function that handles 'environment effects',

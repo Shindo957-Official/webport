@@ -9,8 +9,10 @@
 #include "level_table.h"
 #include "save_file.h"
 #include "types.h"
+#ifndef TARGET_N64
 #include "pc/lua/utils/smlua_level_utils.h"
 #include "pc/lua/utils/smlua_text_utils.h"
+#endif
 
 #ifdef VERSION_EU
 extern s32 gInGameLanguage;

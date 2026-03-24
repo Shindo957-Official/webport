@@ -5,7 +5,9 @@
 #include "main.h"
 #include "rumble_init.h"
 #include "object_helpers.h"
+#ifndef TARGET_N64
 #include "pc/djui/djui.h"
+#endif
 
 s8 D_SH_8031D8F8[0x60];
 

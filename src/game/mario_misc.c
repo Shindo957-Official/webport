@@ -24,9 +24,11 @@
 #include "skybox.h"
 #include "hardcoded.h"
 #include "sound_init.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/mods/mods.h"
+#endif
 
 #define TOAD_STAR_1_REQUIREMENT gBehaviorValues.ToadStar1Requirement
 #define TOAD_STAR_2_REQUIREMENT gBehaviorValues.ToadStar2Requirement
