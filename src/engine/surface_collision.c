@@ -10,8 +10,10 @@
 #include "math_util.h"
 #include "game/game_init.h"
 #include "game/hardcoded.h"
+#ifndef TARGET_N64
 #include "pc/utils/misc.h"
 #include "pc/network/network.h"
+#endif
 
 Vec3f gFindWallDirection = { 0 };
 u8 gFindWallDirectionActive = false;

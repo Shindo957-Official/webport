@@ -14,11 +14,13 @@
 #include "game/object_list_processor.h"
 #include "graph_node.h"
 #include "surface_collision.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/mods/mods.h"
 #include "pc/lua/smlua.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/lua/smlua_utils.h"
+#endif
 #include "game/rng_position.h"
 #include "game/interaction.h"
 #include "game/hardcoded.h"

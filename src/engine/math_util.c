@@ -1,4 +1,6 @@
 #include <ultra64.h>
+#include <float.h>
+#include <string.h>
 
 #include "sm64.h"
 #include "engine/graph_node.h"

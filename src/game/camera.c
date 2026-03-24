@@ -32,10 +32,12 @@
 #include "mario.h"
 #include "game/hardcoded.h"
 #include "game/sound_init.h"
+#ifndef TARGET_N64
 #include "pc/configfile.h"
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/djui/djui.h"
+#endif
 #include "first_person_cam.h"
 #include "rendering_graph_node.h"
 

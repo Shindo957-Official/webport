@@ -47,8 +47,10 @@
 #include "spawn_sound.h"
 #include "game/rng_position.h"
 #include "rumble_init.h"
+#ifndef TARGET_N64
 #include "pc/lua/utils/smlua_model_utils.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 #include "hardcoded.h"
 #include "engine/lighting_engine.h"
 

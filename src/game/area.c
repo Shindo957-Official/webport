@@ -23,11 +23,13 @@
 #include "level_table.h"
 #include "gfx_dimensions.h"
 #include "game/ingame_menu.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
 #include "pc/djui/djui.h"
 #include "pc/djui/djui_panel_pause.h"
 #include "pc/nametags.h"
+#endif
 #include "engine/lighting_engine.h"
 
 struct SpawnInfo gPlayerSpawnInfos[MAX_PLAYERS];

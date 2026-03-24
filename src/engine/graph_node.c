@@ -9,7 +9,9 @@
 #include "game/area.h"
 #include "geo_layout.h"
 #include "include/geo_commands.h"
+#ifndef TARGET_N64
 #include "pc/debuglog.h"
+#endif
 
 /**
  * Initialize a geo node with a given type. Sets all links such that there

@@ -18,8 +18,10 @@
 #include "engine/math_util.h"
 #include "game/level_update.h"
 #include "game/hardcoded.h"
+#ifndef TARGET_N64
 #include "pc/network/network.h"
 #include "pc/lua/smlua_hooks.h"
+#endif
 
 /**
  * Partitions for course and object surfaces. The arrays represent

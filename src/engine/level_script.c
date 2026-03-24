@@ -26,10 +26,12 @@
 #include "surface_collision.h"
 #include "surface_load.h"
 #include "level_table.h"
+#ifndef TARGET_N64
 #include "pc/lua/utils/smlua_model_utils.h"
 #include "pc/lua/smlua.h"
 #include "pc/djui/djui.h"
 #include "pc/debug_context.h"
+#endif
 #include "game/hardcoded.h"
 #include "menu/intro_geo.h"
 #include "game/envfx_snow.h"
